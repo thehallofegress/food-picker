@@ -24,7 +24,7 @@ export default function RestaurantTracker() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [newRestaurant, setNewRestaurant] = useState<Restaurant>({ name: "", category: "" });
   const [recommendation, setRecommendation] = useState<string>("");
-  const [showList, setShowList] = useState<boolean>(true);
+  const [showList, setShowList] = useState<boolean>(false);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
 
   useEffect(() => {
