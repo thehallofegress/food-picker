@@ -1,0 +1,92 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Input group styling */
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .input,
+  .select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Button styling */
+  .button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button.primary {
+    background: #007bff;
+  }
+  
+  .button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Recommendation text */
+  .recommendation {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    margin: 10px 0;
+  }
+  
+  /* Restaurant list */
+  .restaurant-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .restaurant-item {
+    padding: 8px;
+    background: #e9ecef;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
