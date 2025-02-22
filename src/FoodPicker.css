@@ -30,6 +30,16 @@ body {
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
+    color: white; /* Ensures contrast on a green background */
+    background: #2c7a2c; /* Dark green background */
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
   }
   
   /* Input group styling */
@@ -86,7 +96,7 @@ body {
   .recommendation {
     font-size: 18px;
     font-weight: bold;
-    color: #d9534f;
+    color: #134d33;
     margin: 10px 0;
   }
   

@@ -22,7 +22,7 @@ const defaultRestaurants: Restaurant[] = [
 
 export default function RestaurantTracker() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
-  const [newRestaurant, setNewRestaurant] = useState<Restaurant>({ name: "", category: "Light Meal" });
+  const [newRestaurant, setNewRestaurant] = useState<Restaurant>({ name: "", category: "" });
   const [recommendation, setRecommendation] = useState<string>("");
   const [showList, setShowList] = useState<boolean>(true);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
@@ -62,7 +62,7 @@ export default function RestaurantTracker() {
     } else {
       setRestaurants([...restaurants, { name: newRestaurant.name, category: newRestaurant.category }]);
     }
-    setNewRestaurant({ name: "", category: "Light Meal" });
+    setNewRestaurant({ name: "", category: "" });
   };
 
   const getRecommendation = (category: string | null = null) => {
@@ -83,14 +83,14 @@ export default function RestaurantTracker() {
   return (
     <div className="container" style={{ padding: "10px" }}>
       <div className="card" style={{ maxWidth: "480px", margin: "auto" }}>
-        <h1 className="title">Restaurant Picker</h1>
+        <h1 className="title">🐷🧚今天到底吃啥吖</h1>
         <div className="recommendation-box" style={{ padding: "15px", background: "#f8f9fa", borderRadius: "8px", textAlign: "center", marginBottom: "15px" }}>
           {recommendation ? (
             <p className="recommendation">
-              🐷🧚 🍽️ <span style={{ color: "#007bff" }}>{recommendation}</span>
+              🍽️ 就决定是你了 👉：<span style={{ color: "#007bff" }}>{recommendation}</span>
             </p>
           ) : (
-            <p style={{ fontSize: "14px", color: "#6c757d" }}>Click a button to get a restaurant recommendation.</p>
+            <p style={{ fontSize: "14px", color: "#6c757d" }}>Click a button to help you make a decision🤔.</p>
           )}
         </div>
         <div className="recommendation-container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", justifyContent: "center", marginBottom: "15px" }}>
