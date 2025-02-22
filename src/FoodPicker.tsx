@@ -81,16 +81,24 @@ export default function RestaurantTracker() {
   };
 
   return (
-    <div className="container">
-      <div className="card">
+    <div className="container" style={{ padding: "10px" }}>
+      <div className="card" style={{ maxWidth: "480px", margin: "auto" }}>
         <h1 className="title">Restaurant Picker</h1>
-        <div className="button-group">
-          <button className="button" onClick={() => getRecommendation()}>Random</button>
-          <button className="button" onClick={() => getRecommendation("Light Meal")}>Light Meal</button>
-          <button className="button" onClick={() => getRecommendation("Heavy Meal")}>Heavy Meal</button>
+        <div className="recommendation-box" style={{ padding: "15px", background: "#f8f9fa", borderRadius: "8px", textAlign: "center", marginBottom: "15px" }}>
+          {recommendation ? (
+            <p className="recommendation">
+              🐷🧚 🍽️ <span style={{ color: "#007bff" }}>{recommendation}</span>
+            </p>
+          ) : (
+            <p style={{ fontSize: "14px", color: "#6c757d" }}>Click a button to get a restaurant recommendation.</p>
+          )}
         </div>
-        {recommendation && <p className="recommendation">Recommended: {recommendation}</p>}
-        <div className="input-group">
+        <div className="recommendation-container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", justifyContent: "center", marginBottom: "15px" }}>
+          <button className="button" onClick={() => getRecommendation()}>🔀 Random</button>
+          <button className="button" onClick={() => getRecommendation("Light Meal")}>🥗 Light Meal</button>
+          <button className="button" onClick={() => getRecommendation("Heavy Meal")}>🍖 Heavy Meal</button>
+        </div>
+        <div className="input-group" style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
           <input
             type="text"
             placeholder="Restaurant name"
@@ -115,10 +123,10 @@ export default function RestaurantTracker() {
           </button>
         </div>
         {showList && (
-          <ul className="restaurant-list">
+          <ul className="restaurant-list" style={{ maxHeight: "300px", overflowY: "auto", padding: "10px", borderRadius: "5px", background: "#fff" }}>
             {restaurants.map((restaurant, index) => (
-              <li key={index} className="restaurant-item">
-                <strong>{restaurant.name}</strong> ({restaurant.category})
+              <li key={index} className="restaurant-item" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px", borderBottom: "1px solid #ddd" }}>
+                <span><strong>{restaurant.name}</strong> ({restaurant.category})</span>
                 <button className="button edit" onClick={() => editRestaurant(index)}>
                   <FaEdit />
                 </button>

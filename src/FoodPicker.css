@@ -20,10 +20,8 @@ body {
   
   /* Card styling */
   .card {
-    background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
@@ -58,6 +56,22 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s ease;
+  }
+  
+  .button.edit {
+    background: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .button.edit:hover {
+    color: #0056b3; /* Darker blue for hover effect */
   }
   
   .button.primary {

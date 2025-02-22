@@ -7,14 +7,14 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: `url('/background.jpg')`,
+        backgroundImage: `url('/background2.jpg')`,
         backgroundSize: "cover",        // Ensures it covers the whole screen
         backgroundPosition: "center",   // Centers the image
         backgroundRepeat: "no-repeat",  // Prevents tiling
         width: "100vw",                 // Full viewport width
         height: "100vh",                // Full viewport height
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "center"
       }}
     >
